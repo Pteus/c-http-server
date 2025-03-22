@@ -42,8 +42,26 @@ server_addr.sin_addr.s_addr = htons(INADDR_ANY);
 bind(socketfd, (struct sockaddr *)&server_addr, sizeof(server_addr);
 ```
 
-We are typecasting server_addr to the struct pointer struct sockaddr \* ,i.e, whatever addr is pointing to, act like a sockaddr
+´
+We are typecasting `server_addr` to the struct pointer `struct sockaddr *` ,i.e, whatever `addr` is pointing to, act like a `sockaddr`
 
 📖 **Man page:** `man 2 bind`
+
+---
+
+## 3 - Listen
+
+### 3.1 - Listening for Connections
+
+Once bound, we need to listen for incoming connections using `listen()`.
+`listen()` marks the socket referred to by sockfd as a passive socket, that is, as a socket that will be used to accept incoming connection requests.
+
+#### `listen()`
+
+```c
+listen(socketfd, SOMAXCONN)
+```
+
+📖 **Man page:** `man 2 listen`
 
 ---
