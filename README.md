@@ -65,3 +65,20 @@ listen(socketfd, SOMAXCONN)
 📖 **Man page:** `man 2 listen`
 
 ---
+
+## 4 - Accept
+
+### 4.1 - Accepting Connections
+
+When a client connects, we accept it using `accept()`.
+`accept()` extracts the first connection request on the queue of pending connections for the listening socket, sockfd, creates a new connected socket, and returns a new file descriptor referring to that socket.
+
+#### `accept()`
+
+```c
+accept(socketfd, (struct sockaddr *restrict)&server_addr, (socklen_t *restrict)&server_addrlen)
+```
+
+📖 **Man page:** `man 2 accept`
+
+---
