@@ -104,3 +104,19 @@ send(connection, resp, sizeof(resp), 0);
 📖 **Man page:** `man 2 send`
 
 ---
+
+## 6 - Close
+
+### 6.1 - Closing Sockets
+
+Once the response is sent, we must close the connection.
+
+#### `close()`
+
+```c
+close(connection);
+```
+
+📖 **Man page:** `man 2 close`
+
+---

@@ -69,6 +69,7 @@ int main(void) {
       continue;
     }
 
+    // 6 - close the connection
     close(connection);
     printf("connection closed\n");
   }
