@@ -82,3 +82,25 @@ accept(socketfd, (struct sockaddr *restrict)&server_addr, (socklen_t *restrict)&
 📖 **Man page:** `man 2 accept`
 
 ---
+
+## 5 - Receive & Send
+
+### 5.1 - Receiving Data (`recv()`)
+
+```c
+char buffer[1024];
+recv(connection, buffer, BUFFER_SIZE, 0);
+```
+
+📖 **Man page:** `man 2 recv`
+
+### 5.2 - Sending Data (`send()`)
+
+```c
+char resp[] = "HTTP/1.1 200 OK\r\nContent-Length: 13\r\n\r\nHello, world!";
+send(connection, resp, sizeof(resp), 0);
+```
+
+📖 **Man page:** `man 2 send`
+
+---
